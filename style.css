@@ -1,7 +1,17 @@
 /** Add any CSS you need to this file. */
 body {
     background-color: #dae1e7;
+    color: #dd6b4d;
 }
+
+header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    position: relative;
+    left: 2em;
+
+}
+
 #navbartop {
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -10,7 +20,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     z-index: 3;
 }
-
 
 #navbartop ul {
     list-style-type: none;
@@ -37,13 +46,13 @@ body {
 #navbartop li a:hover {
     background-color: #183661;
     border-radius: 10px 30px;
-
 }
 
 #navbartop .active {
     background-color: #dd6b4d;
     border-radius: 10px 30px;
 }
+
 #navtopstart {
     margin-left: 2%;
 }
@@ -53,6 +62,10 @@ body {
     margin-left: 60%;
     margin-top: 12%;
     width: 2em;
+    -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 6s; /* Firefox < 16 */
+    animation: fadein 6s;
+
 }
 
 #shake1 {
@@ -66,9 +79,47 @@ body {
     position: absolute;
     left: 0;
     -webkit-animation: slide 4s forwards;
-    -webkit-animation-delay: .5s;
+    -moz-animation: slide 4s forwards;
     animation: slide 4s forwards;
-    animation-delay: .5s;
+}
+
+header h1 {
+    -webkit-animation: slide 4s forwards;
+    -moz-animation: slide 4s forwards;
+    animation: slide 4s forwards;
+}
+
+#description {
+    z-index: 2;
+    padding: 2em;
+    width: 42vw;
+    position: sticky;
+    top: 4rem;
+    float: right;
+    -webkit-animation: fadein 8s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 8s; /* Firefox < 16 */
+    animation: fadein 8s;
+}
+
+#description p {
+    font-family: 'Mukta', sans-serif;
+    color: #183661;
+}
+
+#description h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #dd6b4d;
+}
+
+#toplogo {
+    width: 3em;
+    position: relative;
+    left: -3em;
+    bottom: 0.5em;
+    float: right;
+    -webkit-animation: fadein 14s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 14s; /* Firefox < 16 */
+    animation: fadein 14s;
 }
 
 @-webkit-keyframes slide {
@@ -76,7 +127,17 @@ body {
         margin-left: 50%;
         width: 100%;
     }
+    to {
+        margin-left: 0;
+        width: 300%;
+    }
+}
 
+@-moz-keyframes slide {
+    from {
+        margin-left: 50%;
+        width: 100%;
+    }
     to {
         margin-left: 0;
         width: 300%;
@@ -88,48 +149,36 @@ body {
         margin-left: 50%;
         width: 100%;
     }
-
     to {
         margin-left: 0;
         width: 300%;
     }
 }
 
-
-#description {
-    z-index: 2;
-    font-family: 'Mukta', sans-serif;
-    padding: 2em;
-    width: 42vw;
-    position: relative;
-    float:right;
-    -webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 6s; /* Firefox < 16 */
-    animation: fadein 6s;
-}
-
-#description p {
-    color: #183661;
-}
-
-#description h1 {
-    color: #dd6b4d;
-}
-
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/* Firefox < 16 */
 @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
